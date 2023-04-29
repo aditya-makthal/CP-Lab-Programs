@@ -20,6 +20,9 @@ class FenwickTree {
         }
         return result;
     }
+    public int sumRange(int i, int j){
+        return query(j)-query(i-1);
+    }
 }
 class C{
     public static void main(String[] args) {
@@ -29,7 +32,7 @@ class C{
         ft.update(2,3);
         ft.update(3,4);
         ft.update(4,5);
-        int sum = ft.query(4);
+        int sum = ft.sumRange(2,4);
         System.out.println(sum);
     }
 }
